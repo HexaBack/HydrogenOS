@@ -3,8 +3,14 @@ Id_1=29de8499-aba8-45d8-a757-fefd326477c7
 Number=1
 Rows=1
 
+[Effect-blur]
+BlurStrength=5
+
 [Effect-login]
 FadeToBlack=true
+
+[Effect-overview]
+TouchBorderActivate=2
 
 [Effect-scale]
 InScale=0.9000000000000001
@@ -37,6 +43,7 @@ wobblywindowsEnabled=true
 [TabBox]
 LayoutName=flipswitch
 ShowDesktopMode=1
+TouchBorderAlternativeActivate=6
 
 [TabBoxAlternative]
 ApplicationsMode=1
@@ -48,6 +55,10 @@ padding=4
 
 [Tiling][c59323a7-6c7c-5999-ba78-4b8c03a908f2]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[TouchEdges]
+Bottom=ApplicationLauncher
+Top=KRunner
 
 [Windows]
 CenterSnapZone=10
