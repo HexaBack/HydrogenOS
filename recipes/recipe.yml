@@ -35,12 +35,12 @@ modules:
       - ksystemlog
       - k3b
       - sweeper
-      - kopete
       - kmag
       - kmousetool
       - krecorder
       - kmouth
       - zanshin
+      - strawberry
     remove:
       # example: removing firefox (in favor of the flatpak) (or in my case, in favor of Konqueror. Go ahead, make fun of me.)
       # "firefox" is the main package, "firefox-langpacks" is a dependency

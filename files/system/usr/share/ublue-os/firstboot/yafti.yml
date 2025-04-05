@@ -66,10 +66,9 @@ screens:
             - KolourPaint (simple paintin software): org.kde.kolourpaint
             - Kontact (mail, contacts, calendar, to-do, RSS feeds, journal and notes): org.kde.kontact
             - Skanpage (multi-page document scanner): org.kde.skanpage
-            - Strawberry (music player): org.strawberrymusicplayer.strawberry
         Plasma accessories:
           description: Additional tools that some might find useful. (Recommended)
-          default: true
+          default: false
           packages:
             - digiKam (advanced photo library manager): org.kde.digikam
             - ISO Image Writer: org.kde.isoimagewriter
@@ -95,16 +94,12 @@ screens:
           description: Minigames and desktop toys.
           default: false
           packages:
-            - KBlocks (Falling Blocks clone): org.kde.kblocks
             - KBounce (Bouncing ball game): org.kde.kbounce
             - KBreakOut (Breakout clone): org.kde.kbreakout
-            - KMahjongg (Mahjong board game): org.kde.kmahjongg
             - KMines (Minesweeper clone): org.kde.kmines
             - KNetWalk (NetWalk clone): org.kde.knetwalk
             - KNights (Chess clone): org.kde.knights
             - KPatience (card game collection): org.kde.kpat
-            - KSudoku (Sudoku clone): org.kde.ksudoku
-            - Palapeli (jigsaw puzzle simulator): org.kde.palapeli
         Mobile applications:
           description: Convergent applications for mobile Plasma devices.
           default: false
@@ -127,6 +122,8 @@ screens:
       links:
         - "Install More Applications":
             run: /usr/bin/plasma-discover
+        - "More KDE software":
+            run: /usr/bin/xdg-open https://apps.kde.org
         - "Configure everything imaginable":
             run: /usr/bin/systemsettings
       description: |
