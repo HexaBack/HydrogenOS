@@ -3,7 +3,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: HydrogenOS
 # description will be included in the image's metadata
-description: Beautiful and feature-rich operating system with an Oxygen-focused design
+description: Beautiful, and feature-rich KDE-based operating system with an Oxygen-focused design
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-main
@@ -31,21 +31,35 @@ modules:
       - plasma-oxygen-qt6
       - kvantum
       - konqueror
+      - kmix
+      - ksystemlog
+      - k3b
+      - sweeper
+      - kopete
+      - kmag
+      - kmousetool
+      - krecorder
+      - kmouth
+      - zanshin
     remove:
-      # example: removing firefox (in favor of the flatpak)
+      # example: removing firefox (in favor of the flatpak) (or in my case, in favor of Konqueror. Go ahead, make fun of me.)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      - kjournald-libs
+      - kjournald
+      - nvtop
 
 #  - type: default-flatpaks
 #    notify: true # Send notification after install/uninstall is finished (true/false)
 #    system:
 #      # If no repo information is specified, Flathub will be used by default
 #      install:
-#        - org.mozilla.firefox
-#        - org.gnome.Loupe
+#        - 
 #      remove:
-#        - org.gnome.eog
+#        - 
 #    user: {} # Also add Flathub user repo, but no user packages
 
+  - type: yafti # user choice!
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - type: initramfs # plymouth theming

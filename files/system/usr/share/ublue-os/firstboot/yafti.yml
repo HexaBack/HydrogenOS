@@ -1,0 +1,133 @@
+title: Welcome to HydrogenOS
+properties:
+  mode: "run-on-change"
+screens:
+  first-screen:
+    source: yafti.screen.title
+    values:
+      title: "Welcome to HydrogenOS (rolling alpha)"
+      icon: "/usr/share/icons/oxygen/base/256x256/categories/preferences-desktop.png"
+      description: |
+        Let's get this system quickly set up!
+  can-we-modify-your-flatpaks:
+    source: yafti.screen.consent
+    values:
+      title: Additional software repositories
+      condition:
+        run: flatpak remotes --columns=name | grep fedora
+      description: |
+        Your system is currently using the limited Fedora-provided Flatpak remote, whose applications are usually missing important codecs and other features. This step will migrate them to their up-to-date upstream Flathub equivalents. If you don't want to do this, simply close this window.
+      actions:
+        - run: flatpak remote-delete --system --force fedora
+        - run: flatpak remote-delete --user --force fedora
+        - run: flatpak remove --system --noninteractive --all
+        - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
+        - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
+  check-system-flathub:
+    source: yafti.screen.consent
+    values:
+      title: Missing Flathub Repository (System)
+      condition:
+        run: flatpak remotes --system --columns=name | grep flathub | wc -l | grep '^0$'
+      description: |
+        Your system does not contain any Flatpak remotes. Flathub will now be added to the system-wide remote list. This is neccessary to be able to install applications from Discover.
+      actions:
+        - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
+  check-user-flathub:
+    source: yafti.screen.consent
+    values:
+      title: Missing Flathub Repository (User)
+      condition:
+        run: flatpak remotes --user --columns=name | grep flathub | wc -l | grep '^0$'
+      description: |
+        Your user does not contain any Flatpak remotes. Flathub will now be added to your user's remote list. This is neccessary for user-confined applications.
+      actions:
+        - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
+  applications:
+    source: yafti.screen.package
+    values:
+      title: Recommended software
+      show_terminal: true
+      package_manager: yafti.plugin.flatpak
+      package_manager_defaults:
+        user: true
+        system: false
+      groups:
+        Core Plasma apps:
+          description: Core system applications for a traditional KDE Plasma environment. (Heavily Recommended)
+          default: true
+          packages:
+            - Calligra (office suite): org.kde.calligra
+            - Gwenview (image viewer): org.kde.gwenview
+            - Kaffeine (media player): org.kde.kaffeine
+            - Kamoso (webcam/document camera viewer): org.kde.kamoso
+            - KCalc (calculator): org.kde.kcalc
+            - KColorChooser (color picker): org.kde.kcolorchooser
+            - KolourPaint (simple paintin software): org.kde.kolourpaint
+            - Kontact (mail, contacts, calendar, to-do, RSS feeds, journal and notes): org.kde.kontact
+            - Skanpage (multi-page document scanner): org.kde.skanpage
+            - Strawberry (music player): org.strawberrymusicplayer.strawberry
+        Plasma accessories:
+          description: Additional tools that some might find useful. (Recommended)
+          default: true
+          packages:
+            - digiKam (advanced photo library manager): org.kde.digikam
+            - ISO Image Writer: org.kde.isoimagewriter
+            - KMyMoney (finance manager): org.kde.kmymoney
+            - Konversation (IRC client): org.kde.konversation
+            - KRDC (remote desktop client): org.kde.krdc
+            - NeoChat (Matrix chat client): org.kde.neochat
+            - Yakuake (dropdown terminal emulator): org.kde.yakuake
+        Internet browsers:
+          description: Additional web browsers to augment or replace Konqueror's built-in browser.
+          default: false
+          packages:
+            - Junction (on-link-click browser selector): re.sonny.Junction
+            - Falkon: org.kde.falkon
+            - Firefox: org.mozilla.Firefox
+            - GNOME Web: org.gnome.Epiphany
+            - Floorp: one.ablaze.floorp
+            - Brave: com.brave.Browser
+            - Google Chrome: com.google.Chrome
+            - Microsoft Edge: com.microsoft.Edge
+            - Opera: com.opera.Opera
+        Plasma games:
+          description: Minigames and desktop toys.
+          default: false
+          packages:
+            - KBlocks (Falling Blocks clone): org.kde.kblocks
+            - KBounce (Bouncing ball game): org.kde.kbounce
+            - KBreakOut (Breakout clone): org.kde.kbreakout
+            - KMahjongg (Mahjong board game): org.kde.kmahjongg
+            - KMines (Minesweeper clone): org.kde.kmines
+            - KNetWalk (NetWalk clone): org.kde.knetwalk
+            - KNights (Chess clone): org.kde.knights
+            - KPatience (card game collection): org.kde.kpat
+            - KSudoku (Sudoku clone): org.kde.ksudoku
+            - Palapeli (jigsaw puzzle simulator): org.kde.palapeli
+        Mobile applications:
+          description: Convergent applications for mobile Plasma devices.
+          default: false
+          packages:
+            - Clock: org.kde.kclock
+            - PlasmaTube (YouTube client): org.kde.plasmatube
+            - Weather: org.kde.kweather
+        KDE multimedia:
+          description: Content creators will find these very useful.
+          default: false
+          packages:
+            - Kdenlive (video editor): org.kde.kdenlive
+            - Krita (advanced art studio): org.kde.krita
+
+  final-screen:
+    source: yafti.screen.title
+    values:
+      title: "Setup complete"
+      icon: "/usr/share/icons/oxygen/base/128x128/status/security-high.png"
+      links:
+        - "Install More Applications":
+            run: /usr/bin/plasma-discover
+        - "Configure everything imaginable":
+            run: /usr/bin/systemsettings
+      description: |
+        HydrogenOS setup is complete.
