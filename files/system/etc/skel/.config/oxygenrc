@@ -1,0 +1,12 @@
+[InactiveShadow]
+UseOuterColor=true
+
+[Style]
+MenuBarAnimationType=MB_FOLLOW_MOUSE
+StackedWidgetTransitionsEnabled=true
+ToolBarAnimationType=TB_FOLLOW_MOUSE
+ViewDrawFocusIndicator=true
+
+[Windeco]
+ButtonSize=ButtonSmall
+TitleAlignment=AlignLeft

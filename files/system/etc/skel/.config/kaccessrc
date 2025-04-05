@@ -1,0 +1,8 @@
+[Bell]
+ArtsBell=true
+ArtsBellFile=file:///usr/share/sounds/Oxygen-Sys-App-Message.ogg
+
+[Keyboard]
+GestureConfirmation=true
+Gestures=true
+kNotifyAccessX=true

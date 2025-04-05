@@ -48,7 +48,6 @@ modules:
       - kjournald-libs
       - kjournald
       - kdebugsettings
-      - gcdmaster
       - nvtop
 
 #  - type: default-flatpaks

@@ -1,0 +1,50 @@
+[Cookie Policy]
+CookieDomainAdvice={\n}\n
+CookieGlobalAdvice=1
+
+[FMSettings]
+AlwaysTabbedMode=true
+KonquerorTabforExternalURL=true
+MouseMiddleClickClosesTab=true
+TabCloseActivatePrevious=true
+
+[HTML Settings]
+AutoLoadImages=true
+DefaultEncoding=
+Fonts=Liberation Sans,Liberation Mono,Noto Serif,Noto Sans,Z003 [UKWN],Noto Sans,
+HoverLinks=true
+MediumFontSize=12
+MinimumFontSize=7
+ShowAnimations=Enabled
+SmoothScrolling=Enabled
+UnderlineLinks=false
+UnfinishedImageFrame=true
+UseCustomBackground=false
+UserStyleSheetEnabled=false
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=16
+
+[MainWindow]
+ToolBarsMovable=Enabled
+
+[PreviewSettings]
+Plugins=audiothumbnail,avif,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,textthumbnail,gdk-pixbuf-thumbnailer,ffmpegthumbs,webarchivethumbnail
+
+[Reusing]
+AlwaysHavePreloaded=true
+PreloadOnStartup=true
+
+[SearchBar]
+CompletionMode=5
+CurrentEngine=google
+History list=\\0
+Mode=1
+
+[Undo]
+Number of Closed Windows=12
+
+[UserSettings]
+HomeURL[$e]=konq:konqueror
+RestoreLastState=true
