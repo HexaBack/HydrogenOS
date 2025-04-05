@@ -1,5 +1,5 @@
 [Plymouth Theme]
-Name=HydrogenOS Plymouth Splash
+Name=HydrogenOS
 Description=Splash screen based off TUX-LOGO-HUMAN-PRGS-BAR-BLACK-BGRD_V1.0_PLYMOUTH-THEME, edited to resemble the Oxygen design language.
 ModuleName=script
 
