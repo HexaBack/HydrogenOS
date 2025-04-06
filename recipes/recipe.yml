@@ -64,7 +64,6 @@ modules:
       - vlc
       - kronometer
       - ktimetracker
-      - showfoto
       - pim-data-exporter
       - strawberry
     remove:
