@@ -40,7 +40,6 @@ modules:
       - krecorder
       - kmouth
       - strawberry
-      - plymouth-plugin-script
     remove:
       # example: removing firefox (in favor of the flatpak) (or in my case, in favor of Konqueror. Go ahead, make fun of me.)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
