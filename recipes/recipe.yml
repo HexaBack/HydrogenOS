@@ -12,6 +12,11 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
   - type: rpm-ostree
     install:
       - plasma-oxygen
@@ -25,46 +30,15 @@ modules:
       - plasma-oxygen-qt5
       - plasma-oxygen-qt6
       - kvantum
-      - okular
-      - kdenlive
-      - krita
-      - kcalc
-      - kcolorchooser
-      - kolourpaint
-      - ksystemlog
-      - krdc
-      - k3b
-      - libburn
-      - cdrskin
-      - skanlite
-      - kamoso
-      - sweeper
-      - ktimer
-      - kpat
-      - kmag
-      - akregator
-      - kmousetool
-      - kmines
       - konqueror
       - kmix
-      - kmahjongg
-      - kontact
-      - kalarm
-      - ksudoku
-      - kwave
+      - ksystemlog
+      - k3b
+      - sweeper
+      - kmag
+      - kmousetool
+      - krecorder
       - kmouth
-      - knights
-      - digikam
-      - kbreakout
-      - knetwalk
-      - kbounce
-      - zanshin
-      - libreoffice
-      - krename
-      - vlc
-      - kronometer
-      - ktimetracker
-      - pim-data-exporter
       - strawberry
     remove:
       # example: removing firefox (in favor of the flatpak) (or in my case, in favor of Konqueror. Go ahead, make fun of me.)
@@ -75,11 +49,6 @@ modules:
       - kjournald
       - kdebugsettings
       - nvtop
-  
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
 #  - type: default-flatpaks
 #    notify: true # Send notification after install/uninstall is finished (true/false)

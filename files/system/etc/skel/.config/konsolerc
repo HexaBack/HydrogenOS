@@ -1,0 +1,17 @@
+[General]
+ConfigVersion=1
+
+[KonsoleWindow]
+RememberWindowSize=false
+ShowWindowTitleOnTitleBar=true
+
+[MainWindow]
+MenuBar=Enabled
+ToolBarsMovable=Enabled
+
+[TabBar]
+CloseTabOnMiddleMouseButton=true
+NewTabButton=true
+
+[UiSettings]
+ColorScheme=

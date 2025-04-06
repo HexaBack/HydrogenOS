@@ -8,7 +8,7 @@ screens:
       title: "Welcome to HydrogenOS (rolling alpha)"
       icon: "/usr/share/icons/oxygen/base/256x256/categories/preferences-desktop.png"
       description: |
-        Some final tweaks need to be applied for a smooth experience.
+        Let's get this system quickly set up!
   can-we-modify-your-flatpaks:
     source: yafti.screen.consent
     values:
@@ -43,17 +43,89 @@ screens:
         Your user does not contain any Flatpak remotes. Flathub will now be added to your user's remote list. This is neccessary for user-confined applications.
       actions:
         - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
+  applications:
+    source: yafti.screen.package
+    values:
+      title: Recommended software
+      show_terminal: true
+      package_manager: yafti.plugin.flatpak
+      package_manager_defaults:
+        user: true
+        system: false
+      groups:
+        Core Plasma apps:
+          description: Core system applications for a traditional KDE Plasma environment. (Heavily Recommended)
+          default: true
+          packages:
+            - Calligra (office suite): org.kde.calligra
+            - Gwenview (image viewer): org.kde.gwenview
+            - Kaffeine (media player): org.kde.kaffeine
+            - Kamoso (webcam/document camera viewer): org.kde.kamoso
+            - KCalc (calculator): org.kde.kcalc
+            - KColorChooser (color picker): org.kde.kcolorchooser
+            - KolourPaint (simple paintin software): org.kde.kolourpaint
+            - Kontact (mail, contacts, calendar, to-do, RSS feeds, journal and notes): org.kde.kontact
+            - Okular (document viewer): org.kde.okular
+            - Skanpage (multi-page document scanner): org.kde.skanpage
+        Plasma accessories:
+          description: Additional tools that some might find useful. (Recommended)
+          default: false
+          packages:
+            - digiKam (advanced photo library manager): org.kde.digikam
+            - ISO Image Writer: org.kde.isoimagewriter
+            - KMyMoney (finance manager): org.kde.kmymoney
+            - Konversation (IRC client): org.kde.konversation
+            - KRDC (remote desktop client): org.kde.krdc
+            - NeoChat (Matrix chat client): org.kde.neochat
+            - Yakuake (dropdown terminal emulator): org.kde.yakuake
+        Internet browsers:
+          description: Additional web browsers to augment or replace Konqueror's built-in browser.
+          default: false
+          packages:
+            - Junction (on-link-click browser selector): re.sonny.Junction
+            - Falkon: org.kde.falkon
+            - Firefox: org.mozilla.Firefox
+            - GNOME Web: org.gnome.Epiphany
+            - Floorp: one.ablaze.floorp
+            - Brave: com.brave.Browser
+            - Google Chrome: com.google.Chrome
+            - Microsoft Edge: com.microsoft.Edge
+            - Opera: com.opera.Opera
+        Plasma games:
+          description: Minigames and desktop toys.
+          default: false
+          packages:
+            - KBounce (Bouncing ball game): org.kde.kbounce
+            - KBreakOut (Breakout clone): org.kde.kbreakout
+            - KMines (Minesweeper clone): org.kde.kmines
+            - KNetWalk (NetWalk clone): org.kde.knetwalk
+            - KNights (Chess clone): org.kde.knights
+            - KPatience (card game collection): org.kde.kpat
+        Mobile applications:
+          description: Convergent applications for mobile Plasma devices.
+          default: false
+          packages:
+            - Clock: org.kde.kclock
+            - PlasmaTube (YouTube client): org.kde.plasmatube
+            - Weather: org.kde.kweather
+        KDE multimedia:
+          description: Content creators will find these very useful.
+          default: false
+          packages:
+            - Kdenlive (video editor): org.kde.kdenlive
+            - Krita (advanced art studio): org.kde.krita
+
   final-screen:
     source: yafti.screen.title
     values:
       title: "Setup complete"
       icon: "/usr/share/icons/oxygen/base/128x128/status/security-high.png"
       links:
-        - "Discover Flatpak apps":
+        - "Install More Applications":
             run: /usr/bin/plasma-discover
         - "More KDE software":
             run: /usr/bin/xdg-open https://apps.kde.org
         - "Configure everything imaginable":
             run: /usr/bin/systemsettings
       description: |
-        HydrogenOS setup is complete. If you want to delete any built-in application, do so by running in a terminal: rpm-ostree override remove application-name. Likewise, you can also install an application system-wide (necessary for Oxygen theming to work) by running: rpm-ostree install application-name. Use Discover to install flatpaks of everything else.
+        HydrogenOS setup is complete.

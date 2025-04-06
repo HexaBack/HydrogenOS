@@ -1,0 +1,8 @@
+[General]
+LockSidebar=false
+ShowSidebar=true
+
+[MainWindow]
+MenuBar=Disabled
+StatusBar=Enabled
+ToolBarsMovable=Enabled
