@@ -11,4 +11,20 @@
    <Filename>gcdmaster.desktop</Filename>
   </Include>
  </Menu>
+ <Menu>
+  <Name>Multimedia</Name>
+  <Layout>
+   <Merge type="files"/>
+   <Filename>org.kde.k3b.desktop</Filename>
+   <Filename>org.kde.kmix.desktop</Filename>
+   <Filename>org.kde.krecorder.desktop</Filename>
+   <Filename>org.strawberrymusicplayer.strawberry.desktop</Filename>
+   <Separator/>
+   <Merge type="menus"/>
+   <Menuname>More</Menuname>
+  </Layout>
+  <Exclude>
+   <Filename>gcdmaster.desktop</Filename>
+  </Exclude>
+ </Menu>
 </Menu>
