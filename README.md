@@ -1,13 +1,13 @@
-# HydrogenOS &nbsp; [![bluebuild build badge](https://github.com/hexaback/hydrogenos/actions/workflows/build.yml/badge.svg)](https://github.com/hexaback/hydrogenos/actions/workflows/build.yml)
+# HydrogenOS: the best of the past, remade for the future &nbsp; [![bluebuild build badge](https://github.com/hexaback/hydrogenos/actions/workflows/build.yml/badge.svg)](https://github.com/hexaback/hydrogenos/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
-
-After setup, it is recommended you update this README to describe your custom image.
+HydrogenOS is a beautiful and feature-rich KDE-based operating system, with a strong focus on the Oxygen design language and rock-solid stability.
 
 ## Installation
 
+> ISO images, the recommended way to install, are coming soon
+
 > [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+> [The following is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
 
 To rebase an existing atomic Fedora installation to the latest build:
 
@@ -30,9 +30,8 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
-## ISO
-
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+- If the desktop does not look any different, or you want to keep the desktop theming up to date, use the `keepmeup` command.
+> NOTE: `keepmeup` WILL overwrite some of your configurations, back up files as necessary.
 
 ## Verification
 

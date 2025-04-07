@@ -23,6 +23,7 @@ screens:
         - run: flatpak remove --system --noninteractive --all
         - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
         - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
+        - run: flatpak override --user --env=QT_STYLE_OVERRIDE=fusion
   check-system-flathub:
     source: yafti.screen.consent
     values:
