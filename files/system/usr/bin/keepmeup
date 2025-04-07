@@ -2,3 +2,5 @@
 # This script will manually update your desktop configuration to whatever are the latest settings upstream in HydrogenOS.
 # Use this if you are willing to sacrifice your current configuration for updated defaults.
 rsync -a /etc/skel/ ~
+sudo flatpak override --env=QT_STYLE_OVERRIDE=fusion
+flatpak override --user --env=QT_STYLE_OVERRIDE=fusion
