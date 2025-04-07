@@ -59,7 +59,6 @@ screens:
           packages:
             - Calligra (office suite): org.kde.calligra
             - Gwenview (image viewer): org.kde.gwenview
-            - Kaffeine (media player): org.kde.kaffeine
             - Kamoso (webcam/document camera viewer): org.kde.kamoso
             - KCalc (calculator): org.kde.kcalc
             - KColorChooser (color picker): org.kde.kcolorchooser
@@ -67,6 +66,7 @@ screens:
             - Kontact (mail, contacts, calendar, to-do, RSS feeds, journal and notes): org.kde.kontact
             - Okular (document viewer): org.kde.okular
             - Skanpage (multi-page document scanner): org.kde.skanpage
+            - VLC (media player): org.videolan.VLC
         Plasma accessories:
           description: Additional tools that some might find useful. (Recommended)
           default: false
@@ -84,7 +84,7 @@ screens:
           packages:
             - Junction (on-link-click browser selector): re.sonny.Junction
             - Falkon: org.kde.falkon
-            - Firefox: org.mozilla.Firefox
+            - Firefox: org.mozilla.firefox
             - GNOME Web: org.gnome.Epiphany
             - Floorp: one.ablaze.floorp
             - Brave: com.brave.Browser
