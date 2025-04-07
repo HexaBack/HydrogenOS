@@ -2,7 +2,7 @@
 
 HydrogenOS is a beautiful and feature-rich KDE-based operating system, with a strong focus on the Oxygen design language and rock-solid stability.
 
-# HydrogenOS-specific notes:
+## HydrogenOS-specific notes:
 - If you want KDE/Qt apps to look consitent with Oxygen theming, install them via the `rpm-ostree install applicaition-name` command. Oxygen theming for Flatpaks is being figured meanwhile.
 
 ## Installation
