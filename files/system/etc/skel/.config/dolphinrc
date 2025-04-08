@@ -1,3 +1,6 @@
+[ContentDisplay]
+UsePermissionsFormat=CombinedFormat
+
 [ContextMenu]
 ShowCopyMoveMenu=true
 
