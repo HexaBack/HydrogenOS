@@ -130,5 +130,7 @@ screens:
             run: /usr/bin/systemsettings
         - "For systemwide Oxygen theming and/or Flatpak haters: Install the HydrogenOS Ultimate Offline Pack":
             run: konsole -e rpm-ostree install akregator digikam kalarm kamoso kbounce kbreakout kcalc kcolorchooser kdenlive kmines knetwalk knights kolourpaint kontact kpat krdc krename kronometer ktimer ktimetracker kwave libreoffice okular palapeli pim-data-exporter skanlite vlc zanshin
+        - "Intall Crystal Dock (EXPERIMENTAL)":
+            run: /usr/bin/xdg-open https://github.com/dangvd/crystal-dock/releases
       description: |
         HydrogenOS setup is complete.
