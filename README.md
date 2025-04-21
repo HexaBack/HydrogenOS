@@ -1,3 +1,5 @@
+> Important note: I am taking a small break from this project, if something breaks, just let me know and I'll try my best to fix it
+
 # HydrogenOS: the best of the past, remade for the future &nbsp; [![bluebuild build badge](https://github.com/hexaback/hydrogenos/actions/workflows/build.yml/badge.svg)](https://github.com/hexaback/hydrogenos/actions/workflows/build.yml)
 
 HydrogenOS is a beautiful and feature-rich KDE-based operating system, with a strong focus on the Oxygen design language and rock-solid stability.
